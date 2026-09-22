@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Pong Game</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <link rel="icon" href="data:,">
+
+</head>
+
+<body>
+
+  <h1>Pong Game</h1>
+
+  <p>
+    W/S Move • P Pause • +/- Volume • M Mute
+  </p>
+
+
+  <div id="gameShell">
+
+    <canvas
+      id="gameCanvas"
+      width="800"
+      height="500">
+    </canvas>
+
+
+    <!-- =====================
+         MAIN MENU
+         ===================== -->
+
+    <div
+      id="menuOverlay"
+      class="overlay"
+    >
+
+      <div class="menuPanel">
+
+        <h2>PONG</h2>
+
+        <p>First to 5 wins</p>
+
+
+        <h3>Difficulty</h3>
+
+
+        <div id="difficultyButtons">
+
+          <button
+            class="difficultyButton"
+            data-difficulty="easy"
+          >
+            Easy
+          </button>
+
+
+          <button
+            class="difficultyButton selected"
+            data-difficulty="normal"
+          >
+            Normal
+          </button>
+
+
+          <button
+            class="difficultyButton"
+            data-difficulty="hard"
+          >
+            Hard
+          </button>
+
+        </div>
+
+
+        <label for="volumeSlider">
+
+          Volume:
+
+          <span id="volumeValue">
+            60%
+          </span>
+
+        </label>
+
+
+        <input
+          id="volumeSlider"
+          type="range"
+          min="0"
+          max="100"
+          value="60"
+        >
+
+
+        <button id="muteButton">
+          Mute
+        </button>
+
+        <button id="shakeButton">
+          Screen Shake: On
+        </button>
+
+        <button id="startButton">
+          Start Match
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================
+         PAUSE MENU
+         ===================== -->
+
+    <div
+      id="pauseOverlay"
+      class="overlay hidden"
+    >
+
+      <div class="menuPanel">
+
+        <h2>PAUSED</h2>
+
+
+        <button id="resumeButton">
+          Resume
+        </button>
+
+
+        <button id="restartButton">
+          Restart Match
+        </button>
+
+
+        <button id="mainMenuButton">
+          Main Menu
+        </button>
+
+
+        <label for="pauseVolumeSlider">
+
+          Volume:
+
+          <span id="pauseVolumeValue">
+            60%
+          </span>
+
+        </label>
+
+
+        <input
+          id="pauseVolumeSlider"
+          type="range"
+          min="0"
+          max="100"
+          value="60"
+        >
+
+
+        <button id="pauseMuteButton">
+          Mute
+        </button>
+
+        <button id="pauseShakeButton">
+          Screen Shake: On
+        </button>
+
+      </div>
+
+    </div>  
+
+    <!-- =====================
+         GAME OVER MENU
+         ===================== -->
+
+    <div
+      id="gameOverOverlay"
+      class="overlay hidden"
+    >
+
+      <div class="menuPanel">
+
+        <h2 id="gameOverTitle">
+         YOU WIN!
+        </h2>
+
+        <p id="finalScore">
+         Final Score: 5 - 3
+        </p>
+
+        <button id="playAgainButton">
+         Play Again
+        </button>
+
+        <button id="gameOverMenuButton">
+         Main Menu
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+
+</body>
+
+</html>
