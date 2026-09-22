@@ -6,16 +6,15 @@ This project started as a programming learning exercise and gradually developed 
 
 ## Screenshot
 
-![Pong Gameplay](pong/screenshots/pong-gameplay.png)
+![Pong Gameplay](screenshots/pong-gameplay.png)
 
 ### Menus and Game States
 
 | Main Menu | Pause Menu |
 | --- | --- |
-| ![Main Menu](pong/screenshots/pong-menu.png) | ![Pause Menu](pong/screenshots/pong-pause-menu.png) |
-### Game Over
+| ![Main Menu](screenshots/pong-menu.png) | ![Pause Menu](screenshots/pong-pause-menu.png) |
 
-![Game Over](pong/screenshots/pong-game-over.png)
+![Game Over](screenshots/pong-game-over.png)
 
 ## Features
 
